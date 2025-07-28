@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DragonGlass Shineworks</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav ul li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li {
+      padding: 10px;
+      white-space: nowrap;
+    }
+
+    .call-now {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .hero {
+      background-image: url('fjbk.png');
+      background-size: cover;
+      background-position: center;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+    }
+
+    .quote-form {
+      background: #f2f2f2;
+      padding: 20px;
+      max-width: 600px;
+      margin: 30px auto;
+      border-radius: 10px;
+    }
+
+    .quote-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .quote-form input,
+    .quote-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .quote-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .footer-logo {
+      height: 60px;
+    }
+
+    .map-container {
+      width: 100%;
+      max-width: 500px;
+      height: 250px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 768px) {
+      footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .footer-content {
+        align-items: flex-start;
+      }
+
+      .map-container {
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pop-up -->
+  <script>
+    window.onload = () => {
+      alert("Hey! I'm building this site myself, so don't judge too hard — it's a work in progress!");
+    };
+  </script>
+
+  <!-- Header -->
+  <header>
+    <img src="logo.png" alt="DragonGlass Shineworks Logo" class="logo">
+    <a href="tel:1234567890" class="call-now">Call Now</a>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="#">Services</a>
+          <ul>
+            <li><a href="#">Residential</a></li>
+            <li><a href="#">Commercial</a></li>
+            <li><a href="#">Post-Construction</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Service Areas</a>
+          <ul>
+            <li><a href="#">Danville, KY</a></li>
+            <li><a href="#">Harrodsburg, KY</a></li>
+            <li><a href="#">Lancaster, KY</a></li>
+            <li><a href="#">Perryville, KY</a></li>
+            <li><a href="#">Nicholasville, KY</a></li>
+          </ul>
+        </li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero"></div>
+    <!-- background image is set via CSS -->
+  </section>
+
+  <!-- Quote Form -->
+  <section class="quote-form">
+    <h2>Request a Free Quote</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="text" placeholder="Address" required>
+      <input type="text" placeholder="City" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <textarea rows="4" placeholder="Message or Questions"></textarea>
+      <button type="submit">Send Request</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <img src="logo.png" alt="Logo" class="footer-logo">
+      <p><strong>DragonGlass Window Cleaning</strong></p>
+      <p>Phone: 606-282-8825</p>
+      <p>Email: dragonglassky@outlook.com</p>
+      <p>Hours: All Week: 6AM–6PM</p>
+    </div>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.316798332911!2d-84.77849788468124!3d37.64563077977933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8842667e760c3cd9%3A0xe71fd02b26d166e9!2sDanville%2C%20KY!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </footer>
+
+</body>
+</html>
+
