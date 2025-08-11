@@ -1,0 +1,239 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #c3e4fd, #f1f9ff);
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* HERO SECTION */
+.hero-quote-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 70vh;
+}
+
+.hero {
+  flex: 1;
+  background-image: url('fjbk.png'); /* Make sure path and filename are correct */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh; /* fixed height to show background */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Quote Form */
+.quote-form {
+  flex: 1;
+  background: #f2f2f2;
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.quote-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.quote-form input,
+.quote-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.quote-form textarea {
+  min-height: 100px;
+}
+
+.quote-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quote-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Header */
+header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  min-width: 150px;
+  z-index: 100;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.call-now {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.call-now:hover {
+  background-color: #1e7e34;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-logo {
+  height: 60px;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-content {
+    align-items: flex-start;
+  }
+
+  .map-container {
+    margin-top: 0;
+  }
+
+  .hero-quote-container {
+    min-height: 70vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-quote-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .quote-form {
+    max-width: 100%;
+    margin: 0 10px 30px;
+    padding: 30px 20px;
+  }
+}

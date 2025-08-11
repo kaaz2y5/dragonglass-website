@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DragonGlass Shineworks</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Popup alert on page load -->
+  <script>
+    window.onload = () => {
+      alert("Hey! I'm building this site myself, so don't judge too hard — it's a work in progress!");
+    };
+  </script>
+
+  <!-- Header with logo, call button, and navigation -->
+  <header>
+    <img src="logo.png" alt="DragonGlass Shineworks Logo" class="logo" />
+    <a href="tel:1234567890" class="call-now">Call Now</a>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="#">Services</a>
+          <ul>
+            <li><a href="#">Residential</a></li>
+            <li><a href="#">Commercial</a></li>
+            <li><a href="#">Post-Construction</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Service Areas</a>
+          <ul>
+            <li><a href="#">Danville, KY</a></li>
+            <li><a href="#">Harrodsburg, KY</a></li>
+            <li><a href="#">Lancaster, KY</a></li>
+            <li><a href="#">Perryville, KY</a></li>
+            <li><a href="#">Nicholasville, KY</a></li>
+          </ul>
+        </li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero section with background image and overlay text -->
+  <section class="hero-quote-container">
+    <div class="hero">
+      <div class="hero-overlay">
+        <h1>DragonGlass Shineworks</h1>
+        <p>Your trusted window cleaning professionals</p>
+      </div>
+    </div>
+
+    <!-- Quote Request Form -->
+    <div class="quote-form">
+      <h2>Request a Free Quote</h2>
+      <form>
+        <input type="text" name="full-name" placeholder="Full Name" required />
+        <input type="text" name="address" placeholder="Address" required />
+        <input type="text" name="city" placeholder="City" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <textarea name="message" placeholder="Message or Questions"></textarea>
+        <button type="submit">Send Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <img src="logo.png" alt="DragonGlass Shineworks Logo" class="footer-logo" />
+      <p><strong>DragonGlass Window Cleaning</strong></p>
+      <p>Phone: 606-282-8825</p>
+      <p>Email: dragonglassky@outlook.com</p>
+      <p>Hours: All Week: 6AM–6PM</p>
+    </div>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.316798332911!2d-84.77849788468124!3d37.64563077977933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8842667e760c3cd9%3A0xe71fd02b26d166e9!2sDanville%2C%20KY!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </footer>
+
+</body>
+</html>
